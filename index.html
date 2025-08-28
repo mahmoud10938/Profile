@@ -3,22 +3,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahmoud Mohamed Attia | SOC Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333;}
-    header {background: #0a2540; color: #fff; text-align: center; padding: 50px 20px;}
-    header h1 {margin: 0; font-size: 2.5rem;}
-    header p {font-size: 1.2rem; margin-top: 10px;}
-    section {padding: 40px 20px; max-width: 900px; margin: auto;}
-    h2 {color: #0a2540; margin-bottom: 20px; border-bottom: 2px solid #0a2540; display: inline-block; padding-bottom: 5px;}
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Poppins', sans-serif; background: #f4f6f9; color: #333; line-height: 1.6;}
+    header {background: linear-gradient(135deg, #0a2540, #133b5c); color: #fff; text-align: center; padding: 80px 20px;}
+    header h1 {font-size: 3rem; font-weight: 600;}
+    header p {font-size: 1.3rem; margin-top: 10px; font-weight: 300;}
+    section {padding: 60px 20px; max-width: 1100px; margin: auto;}
+    h2 {color: #0a2540; font-size: 2rem; margin-bottom: 20px; position: relative; display: inline-block;}
+    h2::after {content: ''; position: absolute; bottom: -8px; left: 0; width: 50px; height: 3px; background: #ffb703;}
     ul {list-style: none; padding: 0;}
     ul li {margin-bottom: 10px;}
-    .contact {text-align: center; background: #0a2540; color: #fff; padding: 30px 20px;}
-    .contact a {color: #fff; text-decoration: none; margin: 0 10px;}
-    .services, .projects {display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
-    .card {background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-    @media (max-width: 768px) {
-      .services, .projects {grid-template-columns: 1fr;}
-    }
+    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;}
+    .card {background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;}
+    .card:hover {transform: translateY(-8px);}
+    .contact {text-align: center; background: linear-gradient(135deg, #133b5c, #0a2540); color: #fff; padding: 50px 20px;}
+    .contact a {color: #ffb703; text-decoration: none; font-weight: 600;}
+    .contact a:hover {text-decoration: underline;}
+    footer {text-align: center; padding: 20px; font-size: 0.9rem; color: #555;}
   </style>
 </head>
 <body>  <header>
@@ -40,38 +43,46 @@
     </ul>
   </section>  <section id="skills">
     <h2>Skills</h2>
-    <h3>Technical Skills & Languages</h3>
-    <ul>
-      <li>Networking Fundamentals (TCP/IP, OSI Model)</li>
-      <li>SIEM Analysis (Splunk, QRadar)</li>
-      <li>Scripting & Automation (Python, PowerShell, Bash)</li>
-      <li>Incident Detection & Response</li>
-    </ul>
-    <h3>Tools & Technologies</h3>
-    <ul>
-      <li>Splunk, IBM QRadar</li>
-      <li>Wireshark, Nmap</li>
-      <li>Burp Suite, Metasploit</li>
-      <li>Windows & Linux Administration</li>
-    </ul>
+    <div class="grid">
+      <div class="card">
+        <h3>Technical Skills & Languages</h3>
+        <ul>
+          <li>Networking Fundamentals (TCP/IP, OSI Model)</li>
+          <li>SIEM Analysis (Splunk, QRadar)</li>
+          <li>Scripting & Automation (Python, PowerShell, Bash)</li>
+          <li>Incident Detection & Response</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li>Splunk, IBM QRadar</li>
+          <li>Wireshark, Nmap</li>
+          <li>Burp Suite, Metasploit</li>
+          <li>Windows & Linux Administration</li>
+        </ul>
+      </div>
+    </div>
   </section>  <section id="experience">
     <h2>Work Experience</h2>
-    <h3>Cybersecurity Trainee – NTI (National Telecommunication Institute)</h3>
-    <ul>
-      <li>Conducted hands-on labs covering cybersecurity fundamentals.</li>
-      <li>Practiced threat detection, vulnerability assessment, and basic incident response.</li>
-      <li>Collaborated with peers to simulate SOC workflows and reporting.</li>
-    </ul>
+    <div class="card">
+      <h3>Cybersecurity Trainee – NTI (National Telecommunication Institute)</h3>
+      <ul>
+        <li>Conducted hands-on labs covering cybersecurity fundamentals.</li>
+        <li>Practiced threat detection, vulnerability assessment, and basic incident response.</li>
+        <li>Collaborated with peers to simulate SOC workflows and reporting.</li>
+      </ul>
+    </div>
   </section>  <section id="services">
     <h2>Services Offered</h2>
-    <div class="services">
+    <div class="grid">
       <div class="card"><h3>SOC Monitoring</h3><p>Real-time analysis and detection of security events.</p></div>
       <div class="card"><h3>Incident Response Assistance</h3><p>Supporting investigations and containment of cyber threats.</p></div>
       <div class="card"><h3>Security Awareness Support</h3><p>Helping teams understand and recognize common threats.</p></div>
     </div>
   </section>  <section id="projects">
     <h2>Projects</h2>
-    <div class="projects">
+    <div class="grid">
       <div class="card">
         <h3>SOC Log Analysis Project</h3>
         <p><strong>Overview:</strong> Analyzed system and network logs to identify suspicious activity.</p>
@@ -107,5 +118,7 @@
     <p>Phone: <a href="tel:+201029417524">+20 102 941 7524</a></p>
     <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
     <p><strong>Let’s work together to build stronger cyber defenses.</strong></p>
-  </section></body>
+  </section>  <footer>
+    <p>© 2025 Mahmoud Mohamed Attia. All rights reserved.</p>
+  </footer></body>
 </html>
