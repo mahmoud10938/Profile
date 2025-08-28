@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Mohamed Attia | SOC Analyst</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333;}
+    header {background: #0a2540; color: #fff; text-align: center; padding: 50px 20px;}
+    header h1 {margin: 0; font-size: 2.5rem;}
+    header p {font-size: 1.2rem; margin-top: 10px;}
+    section {padding: 40px 20px; max-width: 900px; margin: auto;}
+    h2 {color: #0a2540; margin-bottom: 20px; border-bottom: 2px solid #0a2540; display: inline-block; padding-bottom: 5px;}
+    ul {list-style: none; padding: 0;}
+    ul li {margin-bottom: 10px;}
+    .contact {text-align: center; background: #0a2540; color: #fff; padding: 30px 20px;}
+    .contact a {color: #fff; text-decoration: none; margin: 0 10px;}
+    .services, .projects {display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
+    .card {background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    @media (max-width: 768px) {
+      .services, .projects {grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+<body>  <header>
+    <h1>Mahmoud Mohamed Attia</h1>
+    <p>SOC Analyst</p>
+  </header>  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a dedicated and detail-oriented SOC Analyst with a strong foundation in cybersecurity. Passionate about detecting, analyzing, and responding to security incidents, I thrive in fast-paced environments where I can utilize my technical expertise to strengthen organizational defenses. With a solid academic background and industry-recognized certifications, I aim to contribute to building resilient security operations.</p>
+  </section>  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Beni-Suef National University</strong> – Bachelor’s in Computer Science</li>
+    </ul>
+    <h3>Certifications</h3>
+    <ul>
+      <li>CompTIA Security+</li>
+      <li>eLearnSecurity Certified Incident Responder (eCIR)</li>
+      <li>eLearnSecurity Junior Penetration Tester (eJPT)</li>
+    </ul>
+  </section>  <section id="skills">
+    <h2>Skills</h2>
+    <h3>Technical Skills & Languages</h3>
+    <ul>
+      <li>Networking Fundamentals (TCP/IP, OSI Model)</li>
+      <li>SIEM Analysis (Splunk, QRadar)</li>
+      <li>Scripting & Automation (Python, PowerShell, Bash)</li>
+      <li>Incident Detection & Response</li>
+    </ul>
+    <h3>Tools & Technologies</h3>
+    <ul>
+      <li>Splunk, IBM QRadar</li>
+      <li>Wireshark, Nmap</li>
+      <li>Burp Suite, Metasploit</li>
+      <li>Windows & Linux Administration</li>
+    </ul>
+  </section>  <section id="experience">
+    <h2>Work Experience</h2>
+    <h3>Cybersecurity Trainee – NTI (National Telecommunication Institute)</h3>
+    <ul>
+      <li>Conducted hands-on labs covering cybersecurity fundamentals.</li>
+      <li>Practiced threat detection, vulnerability assessment, and basic incident response.</li>
+      <li>Collaborated with peers to simulate SOC workflows and reporting.</li>
+    </ul>
+  </section>  <section id="services">
+    <h2>Services Offered</h2>
+    <div class="services">
+      <div class="card"><h3>SOC Monitoring</h3><p>Real-time analysis and detection of security events.</p></div>
+      <div class="card"><h3>Incident Response Assistance</h3><p>Supporting investigations and containment of cyber threats.</p></div>
+      <div class="card"><h3>Security Awareness Support</h3><p>Helping teams understand and recognize common threats.</p></div>
+    </div>
+  </section>  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>SOC Log Analysis Project</h3>
+        <p><strong>Overview:</strong> Analyzed system and network logs to identify suspicious activity.</p>
+        <p><strong>Tools:</strong> Splunk, Wireshark.</p>
+        <p><strong>Challenge:</strong> Detecting abnormal patterns and correlating events.</p>
+        <p><strong>Role:</strong> Log monitoring and incident detection.</p>
+      </div>
+      <div class="card">
+        <h3>Web Application Penetration Testing</h3>
+        <p><strong>Overview:</strong> Tested a demo application for vulnerabilities such as XSS and SQLi.</p>
+        <p><strong>Tools:</strong> Burp Suite, Nmap, OWASP ZAP.</p>
+        <p><strong>Challenge:</strong> Bypassing input validation and finding logical flaws.</p>
+        <p><strong>Role:</strong> Performed manual and automated tests, documented findings.</p>
+      </div>
+      <div class="card">
+        <h3>Incident Response Simulation</h3>
+        <p><strong>Overview:</strong> Simulated a phishing attack scenario and coordinated incident response.</p>
+        <p><strong>Tools:</strong> Splunk, Email Header Analysis.</p>
+        <p><strong>Challenge:</strong> Identifying IoCs and mitigating the attack vector.</p>
+        <p><strong>Role:</strong> Analyst responsible for detection and containment steps.</p>
+      </div>
+    </div>
+  </section>  <section id="achievements">
+    <h2>Achievements & Awards</h2>
+    <ul>
+      <li>Completed SOC Level 1 – TryHackMe</li>
+      <li>Achieved CCD Certification</li>
+      <li>Completed SOC Tier 1 Training – CyberDefender</li>
+    </ul>
+  </section>  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:mahmoud086420864200@gmail.com">mahmoud086420864200@gmail.com</a></p>
+    <p>Phone: <a href="tel:+201029417524">+20 102 941 7524</a></p>
+    <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    <p><strong>Let’s work together to build stronger cyber defenses.</strong></p>
+  </section></body>
+</html>
