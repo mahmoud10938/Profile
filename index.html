@@ -1,123 +1,139 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahmoud Mohamed | SOC Analyst</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f1f;
+      color: #f5f5f5;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .glitch {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00ffe5;
+      position: relative;
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #ff00c1, -2px -2px #00fff9; }
+      20% { text-shadow: -2px -2px #ff00c1, 2px 2px #00fff9; }
+      40% { text-shadow: 2px -2px #ff00c1, -2px 2px #00fff9; }
+      60% { text-shadow: -2px 2px #ff00c1, 2px -2px #00fff9; }
+      80% { text-shadow: 2px 2px #ff00c1, -2px -2px #00fff9; }
+      100% { text-shadow: -2px -2px #ff00c1, 2px 2px #00fff9; }
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00ffe5;
+    }
+    .skills, .certifications, .projects, .achievements, .contact, .services {
+      background: #11182e;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0px 0px 15px rgba(0,255,229,0.2);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .contact a {
+      color: #00ffe5;
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581090700227-4c4d6e1e6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
-    <div class="bg-black bg-opacity-60 absolute inset-0"></div>
-    <div class="relative z-10 text-center">
-      <h1 class="text-5xl font-bold mb-4">Mahmoud Mohamed</h1>
-      <h2 class="text-2xl text-cyan-400 font-semibold">SOC Analyst</h2>
+<body>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="glitch">Mahmoud Mohamed</div>
+      <h3>SOC Analyst</h3>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-cyan-400 mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed text-gray-300">
-      I am a passionate SOC Analyst dedicated to detecting, analyzing, and mitigating cyber threats. My focus is on strengthening security operations and responding effectively to incidents. I thrive in fast-paced environments where protecting digital assets is the priority.
-    </p>
-  </section>
-
-  <!-- Education & Certifications -->
-  <section class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-    <div>
-      <h2 class="text-3xl font-bold text-cyan-400 mb-6">Education</h2>
-      <p class="text-gray-300">Beni-Suef University</p>
-      <p class="text-gray-400">Training: Cyber Security at NTI</p>
-    </div>
-    <div>
-      <h2 class="text-3xl font-bold text-cyan-400 mb-6">Certifications</h2>
-      <ul class="list-disc list-inside text-gray-300 space-y-2">
-        <li>Security+</li>
-        <li>eCIR</li>
-        <li>eJPT</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="bg-gray-800 py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-6">Skills</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-3">Tech Skills</h3>
-          <p>SIEM, Incident Response, Threat Hunting, Log Analysis</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-3">Languages</h3>
-          <p>Python, PowerShell, Bash</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-3">Tools</h3>
-          <p>Splunk, QRadar, Wireshark, Nmap, Burp Suite</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-cyan-400 mb-6">Services</h2>
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-      <h3 class="text-xl font-semibold mb-2">SOC Monitoring</h3>
-      <p class="text-gray-300">Continuous monitoring of systems and networks to detect suspicious activities, investigate alerts, and escalate incidents effectively.</p>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="bg-gray-800 py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-6">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-2">Incident Detection Lab</h3>
-          <p>Simulated SOC environment for analyzing security logs and detecting anomalies.</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-2">Threat Hunting Playbook</h3>
-          <p>Developed structured playbook for proactive detection of threats in enterprise networks.</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h3 class="font-semibold text-xl mb-2">SIEM Dashboard</h3>
-          <p>Designed interactive Splunk dashboards for real-time monitoring and reporting.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-cyan-400 mb-6">Achievements</h2>
-    <ul class="list-disc list-inside text-gray-300 space-y-2">
-      <li>SOC Level 1 on TryHackMe</li>
-      <li>CCD</li>
-      <li>SOC Tier 1 on CyberDefender</li>
+  </div>  <section class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate SOC Analyst with strong expertise in monitoring, detecting, and responding to cybersecurity threats. I specialize in leveraging modern security tools and frameworks to strengthen defenses and ensure organizational resilience against cyberattacks.</p>
+  </section>  <section class="education">
+    <h2>Education</h2>
+    <p><strong>Beni-Suef University</strong> - Bachelor in Computer Science</p>
+    <p>Training: Cybersecurity program at NTI</p>
+  </section>  <section class="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>CompTIA Security+</li>
+      <li>eCIR</li>
+      <li>eJPT</li>
     </ul>
+  </section>  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>SIEM Monitoring & Analysis (Splunk, QRadar)</li>
+      <li>Incident Response & Threat Hunting</li>
+      <li>Network Security & IDS/IPS</li>
+      <li>Linux & Windows Administration</li>
+      <li>Scripting (Python, PowerShell, Bash)</li>
+    </ul>
+  </section>  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li><strong>SOC Monitoring:</strong> Real-time monitoring of network and endpoint activities to detect threats early.</li>
+      <li><strong>Incident Response:</strong> Rapid containment and investigation of security incidents.</li>
+      <li><strong>Threat Intelligence:</strong> Analyzing attack trends to enhance security posture.</li>
+    </ul>
+  </section>  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>SIEM Use Case Development:</strong> Built and tested detection rules for phishing and brute-force attacks.</li>
+      <li><strong>Blue Team Lab:</strong> Simulated attacks in a virtual SOC environment to strengthen defense techniques.</li>
+      <li><strong>Incident Response Drill:</strong> Conducted investigation and reporting of simulated ransomware attack.</li>
+    </ul>
+  </section>  <section class="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>SOC Level 1 - TryHackMe</li>
+      <li>CCD Certified</li>
+      <li>SOC Tier 1 - CyberDefender</li>
+    </ul>
+  </section>  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mahmoud086420864200@gmail.com">mahmoud086420864200@gmail.com</a></p>
+    <p>Phone: <a href="tel:+201029417524">+201029417524</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/mahmoud</a></p>
+    <p>GitHub: <a href="#">github.com/mahmoud</a></p>
   </section>
-
-  <!-- Contact -->
-  <section class="bg-gray-800 py-16">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-6">Contact Me</h2>
-      <p>Email: <a href="mailto:mahmoud086420864200@gmail.com" class="text-cyan-400">mahmoud086420864200@gmail.com</a></p>
-      <p>Phone: <span class="text-cyan-400">+201029417524</span></p>
-      <div class="flex justify-center space-x-6 mt-4">
-        <a href="#" class="text-2xl hover:text-cyan-400"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-2xl hover:text-cyan-400"><i class="fab fa-github"></i></a>
-      </div>
-      <a href="mailto:mahmoud086420864200@gmail.com" class="mt-6 inline-block bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-full font-semibold">Let's Work Together</a>
-    </div>
-  </section>
-
 </body>
 </html>
-
