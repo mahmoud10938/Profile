@@ -3,211 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahmoud Mohamed Attia | SOC Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>Mahmoud Mohamed Atia | SOC Analyst</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #0a0f1c;
-      color: #e0e0e0;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    header {
-      background: url('https://img.freepik.com/free-photo/abstract-digital-grid-background_53876-97647.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+    .glitch {
+      position: relative;
       color: #fff;
-      position: relative;
     }
-    header::after {
-      content: "";
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
       position: absolute;
-      top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,50,0.6);
-    }
-    header .content {
-      position: relative;
-      z-index: 2;
-    }
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      text-transform: uppercase;
-      color: #00d4ff;
-      animation: glitch 1.5s infinite;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-    }
-    section {
-      padding: 70px 15%;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease;
-    }
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 {
-      font-family: 'Orbitron', sans-serif;
-      color: #00d4ff;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
       left: 0;
-      width: 50px;
-      height: 3px;
-      background: #00d4ff;
+      width: 100%;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
     }
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0,212,255,0.2);
-      transition: 0.3s;
+    .glitch::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+      color: #00f6ff;
+      z-index: -1;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,212,255,0.5);
+    .glitch::after {
+      animation: glitchBottom 2s infinite linear alternate-reverse;
+      color: #ff0057;
+      z-index: -2;
     }
-    .contact {
-      text-align: center;
-      padding-bottom: 100px;
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(10px, 9999px, 40px, 0); }
+      20% { clip: rect(85px, 9999px, 140px, 0); }
+      30% { clip: rect(20px, 9999px, 60px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
     }
-    .contact a {
-      color: #00d4ff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    footer {
-      background: #050812;
-      text-align: center;
-      padding: 15px;
-      color: #aaa;
-    }
-    @keyframes glitch {
-      0% { text-shadow: 2px 2px #ff005a, -2px -2px #00d4ff; }
-      25% { text-shadow: -2px 2px #00d4ff, 2px -2px #ff005a; }
-      50% { text-shadow: 2px -2px #ff005a, -2px 2px #00d4ff; }
-      75% { text-shadow: -2px -2px #00d4ff, 2px 2px #ff005a; }
-      100% { text-shadow: 2px 2px #ff005a, -2px -2px #00d4ff; }
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(55px, 9999px, 90px, 0); }
+      20% { clip: rect(10px, 9999px, 40px, 0); }
+      30% { clip: rect(85px, 9999px, 140px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
     }
   </style>
 </head>
-<body>
+<body class="bg-gray-950 text-gray-100 font-sans leading-relaxed">
 
   <!-- Hero Section -->
-  <header>
-    <div class="content">
-      <h1>Mahmoud Mohamed Attia</h1>
-      <p>SOC Analyst</p>
+  <section id="cover" class="h-screen flex items-center justify-center bg-cover bg-center relative"
+    style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 text-center text-white">
+      <h1 class="text-5xl font-extrabold tracking-wide glitch" data-text="Mahmoud Mohamed Atia">Mahmoud Mohamed Atia</h1>
+      <p class="mt-4 text-2xl font-light">SOC Analyst</p>
     </div>
-  </header>
+  </section>
 
   <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate SOC Analyst with strong expertise in monitoring, detecting, and responding to security incidents. My focus is on helping organizations strengthen their defenses and reduce risk through proactive threat analysis and incident handling.</p>
+  <section id="about" class="py-16 px-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
+    <p class="text-lg text-gray-300">
+      I am a passionate <span class="text-blue-400 font-semibold">SOC Analyst</span> with a strong foundation in 
+      cybersecurity, dedicated to monitoring, analyzing, and defending against evolving threats.  
+      My mission is to ensure organizational security by proactively detecting incidents and responding effectively.
+    </p>
   </section>
 
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">Beni Suef University - Faculty of Computers and Information</div>
-    <div class="card">Cyber Security Training - NTI</div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="card">CompTIA Security+</div>
-    <div class="card">eCIR</div>
-    <div class="card">eJPT</div>
+  <!-- Education & Certifications -->
+  <section id="education" class="py-16 px-8 max-w-5xl mx-auto bg-gray-900 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Education & Certifications</h2>
+    <ul class="space-y-4 text-gray-300">
+      <li><strong>University:</strong> Beni-Suef National University</li>
+      <li><strong>Training:</strong> Cyber Security Training at NTI</li>
+      <li><strong>Certifications:</strong> Security+ | eCIR | eJPT</li>
+    </ul>
   </section>
 
   <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">SIEM Monitoring (Splunk, QRadar)</div>
-    <div class="card">Threat Hunting & Incident Response</div>
-    <div class="card">Networking & Security Fundamentals</div>
-    <div class="card">Linux & Windows Administration</div>
-    <div class="card">Scripting (Python, PowerShell, Bash)</div>
+  <section id="skills" class="py-16 px-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Skills</h2>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
+      <li>Network Monitoring</li>
+      <li>Incident Response</li>
+      <li>SIEM Tools (Splunk, QRadar)</li>
+      <li>Log Analysis</li>
+      <li>Linux & Windows Security</li>
+      <li>Threat Hunting</li>
+    </ul>
   </section>
 
   <!-- Services -->
-  <section id="services">
-    <h2>Services</h2>
-    <div class="card">SOC Monitoring - Real-time monitoring of security events and alerts.</div>
+  <section id="services" class="py-16 px-8 max-w-5xl mx-auto bg-gray-900 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Services</h2>
+    <div class="space-y-4 text-gray-300">
+      <h3 class="text-xl font-semibold">SOC Monitoring</h3>
+      <p>
+        Providing real-time monitoring and analysis of security events to detect suspicious activities 
+        and ensure quick response to incidents.
+      </p>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <strong>Incident Response Lab</strong><br>
-      Built a simulated SOC environment to analyze and respond to attacks using Splunk and QRadar. Focused on log analysis and threat detection.
-    </div>
-    <div class="card">
-      <strong>Network Defense Project</strong><br>
-      Implemented firewall rules, IDS/IPS, and monitoring dashboards to improve visibility and security posture.
+  <section id="projects" class="py-16 px-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white">Network Intrusion Detection Lab</h3>
+        <p class="text-gray-400 mt-2">
+          Built and configured a lab simulating real-world attacks, leveraging SIEM tools to detect anomalies.  
+          <strong>Tools:</strong> Splunk, Snort, Wireshark.
+        </p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white">SOC Automation Scripts</h3>
+        <p class="text-gray-400 mt-2">
+          Developed Python scripts to automate log parsing and threat intelligence integration.  
+          <strong>Tools:</strong> Python, APIs, Sysmon.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Achievements -->
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <div class="card">SOC Level 1 on TryHackMe</div>
-    <div class="card">CCD</div>
-    <div class="card">SOC Tier 1 on CyberDefender</div>
+  <section id="achievements" class="py-16 px-8 max-w-5xl mx-auto bg-gray-900 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Achievements</h2>
+    <ul class="space-y-3 text-gray-300">
+      <li>SOC Level 1 – TryHackMe</li>
+      <li>CCD Blue Team Learner</li>
+      <li>SOC Tier 1 – CyberDefender</li>
+    </ul>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mahmoud086420864200@gmail.com">mahmoud086420864200@gmail.com</a></p>
-    <p>Phone: <a href="tel:+201029417524">+201029417524</a></p>
-    <p>
-      <a href="#">LinkedIn</a> | 
-      <a href="#">GitHub</a>
-    </p>
+  <section id="contact" class="py-16 px-8 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Contact Me</h2>
+    <p class="text-gray-300 mb-4">Let’s connect and build secure systems together!</p>
+    <p class="text-gray-400">📧 Email: <a href="mailto:mahmoud086420864200@gmail.com" class="text-blue-400">mahmoud086420864200@gmail.com</a></p>
+    <p class="text-gray-400">📱 Phone: <span class="text-blue-400">+201029417524</span></p>
   </section>
 
-  <footer>
-    <p>© 2025 Mahmoud Mohamed Attia | SOC Analyst</p>
+  <footer class="py-6 text-center text-gray-500 bg-gray-950">
+    © 2025 Mahmoud Mohamed Atia. All Rights Reserved.
   </footer>
-
-  <script>
-    const sections = document.querySelectorAll("section");
-    const showSection = () => {
-      const trigger = window.innerHeight * 0.8;
-      sections.forEach(section => {
-        const boxTop = section.getBoundingClientRect().top;
-        if(boxTop < trigger) {
-          section.classList.add("show");
-        }
-      });
-    };
-    window.addEventListener("scroll", showSection);
-    showSection();
-  </script>
 
 </body>
 </html>
